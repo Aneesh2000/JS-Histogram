@@ -5,31 +5,30 @@ document.getElementById("main_btn").addEventListener("click", () => {
 });
 
 document.getElementById("main_Normal").addEventListener("click", () => {
-    document.getElementById("histogram_Normal").innerHTML = "";
-    let TheNumbers = GenerateRandomNumbers();
-    GenerateHistogram(TheNumbers);
+  document.getElementById("histogram_div").innerHTML = "";
+  let TheNumbers = GenerateRandomNumbers();
+  GenerateHistogram(TheNumbers);
 });
 
 document.getElementById("main_Uniform").addEventListener("click", () => {
-    document.getElementById("histogram_Uniform").innerHTML = "";
-    let TheNumbers = GenerateUniformNumbers();
-    GenerateHistogram(TheNumbers);
+  document.getElementById("histogram_div").innerHTML = "";
+  let TheNumbers = GenerateUniformNumbers();
+  GenerateHistogram(TheNumbers);
 });
 
 document.getElementById("main_Exponential").addEventListener("click", () => {
-    document.getElementById("histogram_Exponential").innerHTML = "";
-    let TheNumbers = GenerateExponentialNumbers();
-    GenerateHistogram(TheNumbers);
+  document.getElementById("histogram_div").innerHTML = "";
+  let TheNumbers = GenerateExponentialNumbers();
+  GenerateHistogram(TheNumbers);
 });
 
 function GenerateHistogram(TheNumbers) {
   //let TheNumbers = TheNumbers;
-  
+
   min = d3.min(TheNumbers);
   max = d3.max(TheNumbers);
   let domain = [min, max];
 
-  
   var margin = { top: 30, right: 30, bottom: 30, left: 50 },
     width = 460 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;

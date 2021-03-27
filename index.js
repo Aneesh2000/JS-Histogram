@@ -1,24 +1,47 @@
-document.getElementById("main_btn").addEventListener("click", () => {
+//with/without replacement
+let rCheckbox = document.getElementById("Replacement_checkbox");
+let Mainbtn = document.getElementById("main_btn");
+
+Mainbtn.addEventListener("click", () => {
   document.getElementById("histogram_div").innerHTML = "";
-  let TheNumbers = GenerateRandomNumbers();
+  let TheNumbers;
+  if (rCheckbox.checked) {
+    TheNumbers = GenerateRandomNumbers();
+  } else {
+    TheNumbers = GenerateRandomNumbers(false);
+  }
   GenerateHistogram(TheNumbers);
 });
+
+//FOr Normal
+let meanElem = document.getElementById("normal_mean");
+let deviationElem = document.getElementById("normal_deviation");
 
 document.getElementById("main_Normal").addEventListener("click", () => {
   document.getElementById("histogram_div").innerHTML = "";
-  let TheNumbers = GenerateRandomNumbers();
+  let TheNumbers = GenerateNormalNumbers(
+    meanElem.value | 0,
+    deviationElem.value | 1
+  );
   GenerateHistogram(TheNumbers);
 });
+
+//for Uniform
+let UminElem = document.getElementById("uniform_min");
+let UmaxElem = document.getElementById("uniform_max");
 
 document.getElementById("main_Uniform").addEventListener("click", () => {
   document.getElementById("histogram_div").innerHTML = "";
-  let TheNumbers = GenerateUniformNumbers();
+  let TheNumbers = GenerateUniformNumbers(UminElem | 0, UmaxElem | 100);
   GenerateHistogram(TheNumbers);
 });
 
+//Exponential
+let lambdaVal = document.getElementById("expone_lambda");
+
 document.getElementById("main_Exponential").addEventListener("click", () => {
   document.getElementById("histogram_div").innerHTML = "";
-  let TheNumbers = GenerateExponentialNumbers();
+  let TheNumbers = GenerateExponentialNumbers(lambdaVal | 1);
   GenerateHistogram(TheNumbers);
 });
 

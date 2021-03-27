@@ -2,10 +2,23 @@ h1 {
   text-align: center;
   font-family: sans-serif;
 }
-.main_div {
-  width: 70%;
-  min-width: 450px;
+
+.div_of_btnDivs {
   margin: auto;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.main_div {
+  width: 170px;
+  min-width: 450px;
+  height: 100px;
+  text-align: center;
+  background-color: gray;
+  margin: 10px 0;
+  padding: 5px;
 }
 
 button {

@@ -14,24 +14,29 @@
   </head>
   <body>
     <h1>The Histogram</h1>
-    <div class="main_div">
-      <hr />
-      <button id="main_btn">Random..</button>
-    </div>
-    <div class="main_div">
-        <hr />
-        <button id="main_Normal">Normal</button>
-    </div>
-    <div class="main_div">
-        <hr />
-        <button id="main_Uniform">Uniform</button>
 
-    </div>
-    <div class="main_div">
-        <hr />
+    <div class="div_of_btnDivs">
+      <div class="main_div">
+        <button id="main_btn">Random..</button>
+        <label for="lol">With Replacement</label>
+        <input type="checkbox" name="lol" id="Replacement_checkbox" />
+      </div>
+      <div class="main_div">
+        <button id="main_Normal">Normal</button>
+        <input id="normal_mean" type="number" placeholder="mean" />
+        <input id="normal_deviation" type="number" placeholder="Deviation" />
+      </div>
+      <div class="main_div">
+        <button id="main_Uniform">Uniform</button>
+        <input id="uniform_min" type="number" placeholder="min" />
+        <input id="uniform_max" type="number" placeholder="max" />
+      </div>
+      <div class="main_div">
         <button id="main_Exponential">Exponential</button>
+        <input id="expone_lambda" type="number" placeholder="lambda" />
+      </div>
     </div>
+
     <div id="histogram_div"></div>
-    
   </body>
 </html>

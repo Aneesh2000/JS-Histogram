@@ -27,3 +27,8 @@ h1 {
 #histogram_div > svg > g > rect:hover {
   fill: orange !important;
 }
+
+#theData {
+  text-align: center;
+  font-family: monospace;
+}

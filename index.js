@@ -5,6 +5,7 @@ document.getElementById("main_btn").addEventListener("click", () => {
 
 function GenerateHistogram() {
   let TheNumbers = GenerateRandomNumbers();
+  document.getElementById("theData").innerHTML = TheNumbers;
 
   let domain = [0, 100];
 

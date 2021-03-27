@@ -1,16 +1,29 @@
-#okok {
-  background-color: #4caf50; /* Green */
+h1 {
+  text-align: center;
+  font-family: sans-serif;
+}
+.main_div {
+  width: 70%;
+  min-width: 450px;
+  margin: auto;
+}
+
+#main_btn {
+  width: 160px;
+  display: block;
+  margin: auto;
+  background-color: green;
   border: none;
   color: white;
   padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
   border-radius: 5px;
+}
+
+#histogram_div {
+  margin: auto;
+  width: 470px;
 }
 
 #histogram_div > svg > g > rect:hover {
   fill: orange !important;
 }
-

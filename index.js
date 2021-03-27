@@ -1,4 +1,5 @@
-document.getElementById("okok").addEventListener("click", () => {
+document.getElementById("main_btn").addEventListener("click", () => {
+  document.getElementById("histogram_div").innerHTML = "";
   GenerateHistogram();
 });
 

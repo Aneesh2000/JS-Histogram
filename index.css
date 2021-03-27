@@ -8,7 +8,7 @@ h1 {
   margin: auto;
 }
 
-#main_btn {
+button {
   width: 160px;
   display: block;
   margin: auto;

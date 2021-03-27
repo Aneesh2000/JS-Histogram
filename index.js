@@ -1,11 +1,30 @@
 document.getElementById("main_btn").addEventListener("click", () => {
   document.getElementById("histogram_div").innerHTML = "";
-  GenerateHistogram();
+  let TheNumbers = GenerateRandomNumbers();
+  GenerateHistogram(TheNumbers);
 });
 
-function GenerateHistogram() {
-  let TheNumbers = GenerateRandomNumbers();
-  document.getElementById("theData").innerHTML = TheNumbers;
+document.getElementById("main_Normal").addEventListener("click", () => {
+    document.getElementById("histogram_Normal").innerHTML = "";
+    let TheNumbers = GenerateRandomNumbers();
+    GenerateHistogram(TheNumbers);
+});
+
+document.getElementById("main_Uniform").addEventListener("click", () => {
+    document.getElementById("histogram_Uniform").innerHTML = "";
+    let TheNumbers = GenerateUniformNumbers();
+    GenerateHistogram(TheNumbers);
+});
+
+document.getElementById("main_Exponential").addEventListener("click", () => {
+    document.getElementById("histogram_Exponential").innerHTML = "";
+    let TheNumbers = GenerateExponentialNumbers();
+    GenerateHistogram(TheNumbers);
+});
+
+function GenerateHistogram(TheNumbers) {
+  //let TheNumbers = TheNumbers;
+  
   min = d3.min(TheNumbers);
   max = d3.max(TheNumbers);
   let domain = [min, max];

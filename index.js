@@ -6,9 +6,11 @@ document.getElementById("main_btn").addEventListener("click", () => {
 function GenerateHistogram() {
   let TheNumbers = GenerateRandomNumbers();
   document.getElementById("theData").innerHTML = TheNumbers;
+  min = d3.min(TheNumbers);
+  max = d3.max(TheNumbers);
+  let domain = [min, max];
 
-  let domain = [0, 100];
-
+  
   var margin = { top: 30, right: 30, bottom: 30, left: 50 },
     width = 460 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
